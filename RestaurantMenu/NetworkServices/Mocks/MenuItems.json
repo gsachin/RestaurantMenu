@@ -1,0 +1,20 @@
+[{
+"thumbnailURL":"butter_chicken.jpg",
+"ingredients":"butter, chicken, Rice”,
+"id”:1,
+"categories":["Non Vegetarian"],
+"price”:10.99,
+"descriptions":"Rice Bowl with Butter Chicken",
+"imageURL”:”butter_chicken.jpg”,
+"name":"Butter Chicken"
+},
+{
+"thumbnailURL":"butter_chicken.jpg",
+"ingredients”:”Butter, Paneer, Rice”,
+"id”:2,
+"categories":["Vegetarian"],
+"price”:10.99,
+"descriptions":"Rice Bowl with Butter Paneer",
+"imageURL”:”butter_chicken.jpg”,
+"name":"Butter Paneer"
+}]
