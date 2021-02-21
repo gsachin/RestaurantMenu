@@ -51,7 +51,7 @@ class MenuItemListSearchViewController: UIViewController {
         self.tableView.delegate = self
        
         
-        cancellable = MenuItemsService().loadMenuItems().sink(receiveCompletion: {_ in}) { [self] (itms) in
+        cancellable = MenuItemListService().loadMenuItems().sink(receiveCompletion: {_ in}) { [self] (itms) in
             let list = itms.map { item in MenuItemViewModel(menuItem: item )}
             menuItemListViewModel.Items = BindableViewModelProperty(list)
             menuItemListViewModel.filterItems?.Binding(callback: { _ in
@@ -125,19 +125,25 @@ extension MenuItemListSearchViewController : UITableViewDataSource
 //        }
 
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = UITableViewCell()
+            
 
             if menuItemListViewModel.showSuggestedSearch.value ?? false {
+                let cell = UITableViewCell()
                 let suggestedtitle = MenuItemListViewModel.categories.value?[indexPath.row].rawValue ?? ""
                 // No detailed text or accessory for suggested searches.
                 cell.textLabel?.text = suggestedtitle
                 cell.accessoryType = .none
+                return cell
             } else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuItemCell") as? MenuItemCell else {
+                    return UITableViewCell()
+                }
                 let menuItem = menuItemListViewModel.modelAt(indexPath.row)
-                cell.textLabel?.text = menuItem?.name.value ?? ""
-               // configureCell(cell, forProduct: menuItem)
+                    // cell.textLabel?.text = menuItem?.name.value ?? ""
+                cell.configure(menuItem)
+                return cell
             }
-            return cell
+            
         }
         
 

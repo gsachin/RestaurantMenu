@@ -45,6 +45,19 @@ struct WebService {
             .eraseToAnyPublisher()
     }
     
-    
+    func downloadImage(for urlString: String, success: @escaping(Data?)->Void, fail:@escaping(Error?)->Void )  {
+        guard let url = URL(string: urlString) else {
+                let error = URLError(.badURL, userInfo: [NSURLErrorKey: urlString])
+                return fail(error)
+            }
+
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            // do your stuff here...
+            DispatchQueue.main.async {
+                success(data)
+                // do something on the main queue
+            }
+        }.resume()
+    }
     
 }

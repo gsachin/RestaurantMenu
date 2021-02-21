@@ -29,7 +29,7 @@ class MenuItemListViewController: UIViewController,UITableViewDelegate, UITableV
         filterButton.setBackgroundImage(filterImage, for: .normal)
         //self.searchController.searchBar.searchTextField.rightView = UIImageView(image:filterImage)
         //self.searchController.searchBar//.setRightImage(normalImage: UIImage(named: "filter")!,highLightedImage: UIImage(named: "filter_selected")!)
-        cancellable = MenuItemsService().loadMenuItems().sink(receiveCompletion: {_ in}) { [self] (itms) in
+        cancellable = MenuItemListService().loadMenuItems().sink(receiveCompletion: {_ in}) { [self] (itms) in
             let list = itms.map { item in MenuItemViewModel(menuItem: item )}
             menuItemListViewModel.Items = BindableViewModelProperty(list)
             //print(itms)

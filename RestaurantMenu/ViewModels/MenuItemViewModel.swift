@@ -67,17 +67,18 @@ struct MenuItemViewModel {
     var thumbnailURL : BindableProperty<String?> {
         didSet {
             if let thumbnailURL = thumbnailURL.value {
-                menuItem.ingredients = thumbnailURL
+                menuItem.thumbnailURL = thumbnailURL
             }else {
                 menuItem.thumbnailURL = ""
             }
         }
     }
     
+    
     var imageURL : BindableProperty<String?>{
         didSet {
             if let imageURL = imageURL.value {
-                menuItem.ingredients = imageURL
+                menuItem.imageURL = imageURL
             }else {
                 menuItem.imageURL = ""
             }
