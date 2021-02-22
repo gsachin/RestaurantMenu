@@ -6,6 +6,7 @@
 //
 
 import Foundation
+public let restaurantId = UUID()
 struct MenuItemListViewModel {
     var Items = BindableViewModelProperty<[MenuItemViewModel]>([MenuItemViewModel]()) {
         didSet {
@@ -13,6 +14,10 @@ struct MenuItemListViewModel {
             }
     }
     var filterItems:BindableViewModelProperty<[MenuItemViewModel]>?
+    
+    func notifyItemQuantityChanges(menuItemViewModel:MenuItemViewModel?) {
+
+    }
     
     var selectedCategory = BindableProperty<Category>(Category.all) {
         didSet {

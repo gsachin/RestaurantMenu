@@ -15,6 +15,14 @@
 		4F72543D25E1B1CA006B6E13 /* LazyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72543B25E1B1CA006B6E13 /* LazyImageView.swift */; };
 		4F72545125E1BC98006B6E13 /* MenuItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72545025E1BC98006B6E13 /* MenuItemService.swift */; };
 		4F72545825E1F1B8006B6E13 /* MenuItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72545025E1BC98006B6E13 /* MenuItemService.swift */; };
+		4F7254D225E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254D125E2773B006B6E13 /* MenuItemDetailViewController.swift */; };
+		4F7254D325E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254D125E2773B006B6E13 /* MenuItemDetailViewController.swift */; };
+		4F7254DB25E28301006B6E13 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254DA25E28301006B6E13 /* OrderViewModel.swift */; };
+		4F7254DC25E28301006B6E13 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254DA25E28301006B6E13 /* OrderViewModel.swift */; };
+		4F7254E425E28354006B6E13 /* OrderItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */; };
+		4F7254E525E28354006B6E13 /* OrderItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */; };
+		4F7254ED25E3220E006B6E13 /* BindableStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254EC25E3220E006B6E13 /* BindableStepper.swift */; };
+		4F7254EE25E3220E006B6E13 /* BindableStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254EC25E3220E006B6E13 /* BindableStepper.swift */; };
 		4F9CE90C25D525C40011C0D6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF84B3C25D1032E00D74D3F /* WebService.swift */; };
 		4F9CE91525D5268B0011C0D6 /* MenuItemListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CE91425D5268B0011C0D6 /* MenuItemListService.swift */; };
 		4F9CE91D25D529C90011C0D6 /* ApiEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CE91C25D529C90011C0D6 /* ApiEndPoints.swift */; };
@@ -179,6 +187,10 @@
 		4F72542C25DB8EF6006B6E13 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		4F72543B25E1B1CA006B6E13 /* LazyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyImageView.swift; sourceTree = "<group>"; };
 		4F72545025E1BC98006B6E13 /* MenuItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemService.swift; sourceTree = "<group>"; };
+		4F7254D125E2773B006B6E13 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		4F7254DA25E28301006B6E13 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemViewModel.swift; sourceTree = "<group>"; };
+		4F7254EC25E3220E006B6E13 /* BindableStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableStepper.swift; sourceTree = "<group>"; };
 		4F9CE91425D5268B0011C0D6 /* MenuItemListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemListService.swift; sourceTree = "<group>"; };
 		4F9CE91C25D529C90011C0D6 /* ApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoints.swift; sourceTree = "<group>"; };
 		4F9CE93E25D52FAB0011C0D6 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -396,6 +408,7 @@
 			children = (
 				4FF84A2F25CE873A00D74D3F /* MenuItemListViewController.swift */,
 				4F72540D25DA6115006B6E13 /* MenuItemListSearchViewController.swift */,
+				4F7254D125E2773B006B6E13 /* MenuItemDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -527,6 +540,8 @@
 			children = (
 				4FF84AF725CEB63F00D74D3F /* MenuItemListViewModel.swift */,
 				4FF84AFF25CEB71B00D74D3F /* MenuItemViewModel.swift */,
+				4F7254DA25E28301006B6E13 /* OrderViewModel.swift */,
+				4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -536,6 +551,7 @@
 			children = (
 				4FF84B0925CEBF5000D74D3F /* BindableProperty.swift */,
 				4FF84B1725CEBFAF00D74D3F /* BindableTextField.swift */,
+				4F7254EC25E3220E006B6E13 /* BindableStepper.swift */,
 			);
 			path = Bindable;
 			sourceTree = "<group>";
@@ -837,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF84B3D25D1032E00D74D3F /* WebService.swift in Sources */,
+				4F7254DB25E28301006B6E13 /* OrderViewModel.swift in Sources */,
 				4FF84A3025CE873A00D74D3F /* MenuItemListViewController.swift in Sources */,
 				4FF84A3625CE873A00D74D3F /* RestaurantMenu.xcdatamodeld in Sources */,
 				4F9CE96625D53F2E0011C0D6 /* MenuItemCell.swift in Sources */,
@@ -846,13 +863,16 @@
 				4FF84AF825CEB63F00D74D3F /* MenuItemListViewModel.swift in Sources */,
 				4F72542D25DB8EF6006B6E13 /* Filter.swift in Sources */,
 				4FD1576E25D80B6C00C0BCCB /* SearchTokenCell.swift in Sources */,
+				4F7254D225E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */,
 				4F72543C25E1B1CA006B6E13 /* LazyImageView.swift in Sources */,
 				4FF84ADA25CE9C3200D74D3F /* MenuItem.swift in Sources */,
 				4FF84B1825CEBFAF00D74D3F /* BindableTextField.swift in Sources */,
 				4F72540E25DA6115006B6E13 /* MenuItemListSearchViewController.swift in Sources */,
+				4F7254E425E28354006B6E13 /* OrderItemViewModel.swift in Sources */,
 				4F9CE91D25D529C90011C0D6 /* ApiEndPoints.swift in Sources */,
 				4FF84A2C25CE873A00D74D3F /* AppDelegate.swift in Sources */,
 				4FF84B0A25CEBF5000D74D3F /* BindableProperty.swift in Sources */,
+				4F7254ED25E3220E006B6E13 /* BindableStepper.swift in Sources */,
 				4FF84A2E25CE873A00D74D3F /* SceneDelegate.swift in Sources */,
 				4F9CE93F25D52FAB0011C0D6 /* MockURLSession.swift in Sources */,
 				4F9CE91525D5268B0011C0D6 /* MenuItemListService.swift in Sources */,
@@ -880,6 +900,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F9CE90C25D525C40011C0D6 /* WebService.swift in Sources */,
+				4F7254DC25E28301006B6E13 /* OrderViewModel.swift in Sources */,
 				4FF84B1F25CFC1AE00D74D3F /* BindableProperty.swift in Sources */,
 				4FF84AEE25CEB25900D74D3F /* Order.swift in Sources */,
 				4F9CE97425D541CC0011C0D6 /* MenuItemListViewModel.swift in Sources */,
@@ -889,13 +910,16 @@
 				4FF84B2625CFC1B200D74D3F /* BindableTextField.swift in Sources */,
 				4F72542E25DB8EF6006B6E13 /* Filter.swift in Sources */,
 				4FD1576F25D80B6C00C0BCCB /* SearchTokenCell.swift in Sources */,
+				4F7254D325E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */,
 				4F72543D25E1B1CA006B6E13 /* LazyImageView.swift in Sources */,
 				4FF84AA925CE908700D74D3F /* MenuItemListViewController.swift in Sources */,
 				4F9CE92425D52A330011C0D6 /* ApiEndPoints.swift in Sources */,
 				4F72540F25DA6115006B6E13 /* MenuItemListSearchViewController.swift in Sources */,
+				4F7254E525E28354006B6E13 /* OrderItemViewModel.swift in Sources */,
 				4FF84A6A25CE8B3700D74D3F /* SceneDelegate.swift in Sources */,
 				4FF84B2D25CFCAAD00D74D3F /* MenuItemViewModel.swift in Sources */,
 				4FF84AE725CEB25500D74D3F /* MenuItem.swift in Sources */,
+				4F7254EE25E3220E006B6E13 /* BindableStepper.swift in Sources */,
 				4F9CE96725D53F2E0011C0D6 /* MenuItemCell.swift in Sources */,
 				4F9CE92B25D52A400011C0D6 /* MenuItemListService.swift in Sources */,
 				4F9CE94625D535630011C0D6 /* MockURLSession.swift in Sources */,

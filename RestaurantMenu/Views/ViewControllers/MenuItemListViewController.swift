@@ -112,7 +112,7 @@ class MenuItemListViewController: UIViewController,UITableViewDelegate, UITableV
         
         let menuItemVM = self.menuItemListViewModel.modelAt(indexPath.row)
         
-        cell.configure(menuItemVM)
+        cell.configure(menuItemVM, notify:{_ in })
        
         return cell
     }

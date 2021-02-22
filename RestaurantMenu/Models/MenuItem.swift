@@ -57,23 +57,8 @@ struct MenuItem : Codable {
     init() {
         
     }
-}
-
-class Items {
-   public init() {
-        var item = MenuItem()
-        item.categories = [.vegan, .glutenfree]
-        var menuItemVM = MenuItemViewModel(menuItem: item)
-    menuItemVM.categories?.Binding(callback: { (x) in
-        print(x)
-    })
-        do {
-            menuItemVM.categories?.value?.append(.beverages)
-            let data  = try JSONEncoder().encode([menuItemVM.menuItem])
-           print(String(data: data, encoding: .utf8)!)
-        } catch {
-          print(error)
-        }
+    func createOrder(quantities:Int, withInstructions instructions:String = "")->OrderItem {
+        return OrderItem(menuItem: self, quantities: quantities, price: self.price, Instructions: instructions)
     }
 }
 

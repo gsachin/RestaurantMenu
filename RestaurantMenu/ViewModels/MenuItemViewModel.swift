@@ -85,6 +85,13 @@ struct MenuItemViewModel {
         }
     }
     
+    var selected = BindableProperty<Bool>(false)
+    var quantities = BindableProperty<Int>(0) {
+        didSet {
+            selected.value = quantities.value != 0
+        }
+    }
+    
     init(menuItem: MenuItem) {
         self.menuItem = menuItem
         self.id = BindableProperty<Int>(menuItem.id)
