@@ -34,6 +34,7 @@ class MenuItemListViewController: UIViewController,UITableViewDelegate, UITableV
             menuItemListViewModel.Items = BindableViewModelProperty(list)
             //print(itms)
         }
+        self.title = "Indian Cuisine"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

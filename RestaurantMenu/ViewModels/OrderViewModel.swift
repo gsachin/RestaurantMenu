@@ -15,18 +15,50 @@ struct OrderViewModel {
             }
         }
     }
-    var orderItemViewModelList:BindableViewModelProperty<[OrderItemViewModel]>? {
+    var orderItemViewModelList : BindableViewModelProperty<[MenuItemViewModel]>?
+    {
         didSet {
-            if let restaurantid = restaurantId?.value {
-                order.restaurantId = restaurantid
+            //order.orderItems = orderItems
+            var t = 0.0
+            if let itemVMs = orderItemViewModelList?.value {
+            for item in itemVMs {
+                if let price = item.price.value, let qty = item.quantities.value {
+                t += price * Double(qty)
+                }
+                order.orderItems.append(item.menuItem)
+            }
+            total?.value = t
             }
         }
     }
-    var orderItems = [OrderItem]()
-    var mobileNumber:String?
-    var tableNumber:String?
-    
+    var mobileNumber:BindableProperty<String>? {
+        didSet {
+            isVailid.value = mobileNumber?.value != nil && !(mobileNumber?.value!.isEmpty ?? false) && emailId?.value != nil && !(emailId?.value!.isEmpty ?? false) && (total?.value ?? 0) > 0
+        }
+    }
+    var tableNumber:BindableProperty<String>?
+    var emailId:BindableProperty<String>? {
+    didSet {
+        isVailid.value = mobileNumber?.value != nil && !(mobileNumber?.value!.isEmpty ?? false) && emailId?.value != nil && !(emailId?.value!.isEmpty ?? false)  && (total?.value ?? 0) > 0
+    }
+    }
+    var isVailid = BindableProperty<Bool>(false)
+    var total:BindableProperty<Double>? {
+        didSet {
+            if let value = total?.value {
+                order.total = value
+            }
+        }
+    }
     init(order:Order) {
         self.order = order
+    }
+    
+    func numberOfRows(_ section: Int) -> Int {
+        return self.orderItemViewModelList?.value?.count ?? 0
+    }
+    
+    func modelAt(_ index: Int) -> MenuItemViewModel? {
+        return self.orderItemViewModelList?.value?[index]
     }
 }

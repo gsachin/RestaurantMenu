@@ -177,7 +177,9 @@ extension MenuItemListSearchViewController : UITableViewDataSource, SelectedMenu
             //suggestedSearchDelegate.didSelectSuggestedSearch(token: tokenToInsert)
         } else {
             // A menuItem was selected; inform our delgeate that a menuItem was selected to view.
+            
             _ = menuItemListViewModel.modelAt(indexPath.row)
+            //performSegue(withIdentifier: "MenuItemDetailIdentifire", sender: self)
         }
     }
     

@@ -23,6 +23,8 @@
 		4F7254E525E28354006B6E13 /* OrderItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */; };
 		4F7254ED25E3220E006B6E13 /* BindableStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254EC25E3220E006B6E13 /* BindableStepper.swift */; };
 		4F7254EE25E3220E006B6E13 /* BindableStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254EC25E3220E006B6E13 /* BindableStepper.swift */; };
+		4F7254F625E3BB74006B6E13 /* OrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254F525E3BB74006B6E13 /* OrderItemViewController.swift */; };
+		4F7254F725E3BB74006B6E13 /* OrderItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7254F525E3BB74006B6E13 /* OrderItemViewController.swift */; };
 		4F9CE90C25D525C40011C0D6 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF84B3C25D1032E00D74D3F /* WebService.swift */; };
 		4F9CE91525D5268B0011C0D6 /* MenuItemListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CE91425D5268B0011C0D6 /* MenuItemListService.swift */; };
 		4F9CE91D25D529C90011C0D6 /* ApiEndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9CE91C25D529C90011C0D6 /* ApiEndPoints.swift */; };
@@ -191,6 +193,7 @@
 		4F7254DA25E28301006B6E13 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		4F7254E325E28354006B6E13 /* OrderItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemViewModel.swift; sourceTree = "<group>"; };
 		4F7254EC25E3220E006B6E13 /* BindableStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindableStepper.swift; sourceTree = "<group>"; };
+		4F7254F525E3BB74006B6E13 /* OrderItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderItemViewController.swift; sourceTree = "<group>"; };
 		4F9CE91425D5268B0011C0D6 /* MenuItemListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemListService.swift; sourceTree = "<group>"; };
 		4F9CE91C25D529C90011C0D6 /* ApiEndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndPoints.swift; sourceTree = "<group>"; };
 		4F9CE93E25D52FAB0011C0D6 /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
@@ -409,6 +412,7 @@
 				4FF84A2F25CE873A00D74D3F /* MenuItemListViewController.swift */,
 				4F72540D25DA6115006B6E13 /* MenuItemListSearchViewController.swift */,
 				4F7254D125E2773B006B6E13 /* MenuItemDetailViewController.swift */,
+				4F7254F525E3BB74006B6E13 /* OrderItemViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -865,6 +869,7 @@
 				4FD1576E25D80B6C00C0BCCB /* SearchTokenCell.swift in Sources */,
 				4F7254D225E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */,
 				4F72543C25E1B1CA006B6E13 /* LazyImageView.swift in Sources */,
+				4F7254F625E3BB74006B6E13 /* OrderItemViewController.swift in Sources */,
 				4FF84ADA25CE9C3200D74D3F /* MenuItem.swift in Sources */,
 				4FF84B1825CEBFAF00D74D3F /* BindableTextField.swift in Sources */,
 				4F72540E25DA6115006B6E13 /* MenuItemListSearchViewController.swift in Sources */,
@@ -912,6 +917,7 @@
 				4FD1576F25D80B6C00C0BCCB /* SearchTokenCell.swift in Sources */,
 				4F7254D325E2773B006B6E13 /* MenuItemDetailViewController.swift in Sources */,
 				4F72543D25E1B1CA006B6E13 /* LazyImageView.swift in Sources */,
+				4F7254F725E3BB74006B6E13 /* OrderItemViewController.swift in Sources */,
 				4FF84AA925CE908700D74D3F /* MenuItemListViewController.swift in Sources */,
 				4F9CE92425D52A330011C0D6 /* ApiEndPoints.swift in Sources */,
 				4F72540F25DA6115006B6E13 /* MenuItemListSearchViewController.swift in Sources */,
@@ -1122,6 +1128,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QU956N6S43;
 				INFOPLIST_FILE = RestaurantMenu/Info.plist;
@@ -1129,8 +1136,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenu33;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1142,6 +1150,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QU956N6S43;
 				INFOPLIST_FILE = RestaurantMenu/Info.plist;
@@ -1149,8 +1158,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenu33;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1246,8 +1256,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MenuClip/MenuClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QU956N6S43;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 525B89HHPE;
 				INFOPLIST_FILE = MenuClip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1255,6 +1266,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenus.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1266,8 +1278,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = MenuClip/MenuClip.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QU956N6S43;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 525B89HHPE;
 				INFOPLIST_FILE = MenuClip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1275,6 +1288,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sachinstudy.appclips.RestaurantMenus.Clip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "XC iOS: *";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

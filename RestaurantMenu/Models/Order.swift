@@ -9,14 +9,17 @@ import Foundation
 
 struct Order : Codable {
     var restaurantId:UUID
-    var orderItems = [OrderItem]()
+    var orderItems = [MenuItem]()
     var mobileNumber:String?
     var tableNumber:String?
+    var emailId:String?
+    var total:Double?
 }
 
 struct OrderItem : Codable {
     var menuItem:MenuItem?
     var menuItemId:Int
+    var itemName:String
     var quantities:Int
     var price:Double
     var instructions:String?
@@ -26,6 +29,7 @@ struct OrderItem : Codable {
         self.quantities = quantities
         self.price = price
         self.instructions = Instructions
+        self.itemName = menuItem.name
     }
     
     init(from decoder: Decoder) throws {
@@ -34,11 +38,13 @@ struct OrderItem : Codable {
         self.quantities = try container.decode(Int.self, forKey: .quantities)
         self.price = try container.decode(Double.self, forKey: .price)
         self.instructions = try container.decode(String.self, forKey: .instructions)
+        self.itemName = try container.decode(String.self, forKey: .itemName)
     }
     private enum CodingKeys: String, CodingKey {
         case menuItemId = "menuItemId"
         case quantities = "quantities"
         case price = "price"
         case instructions = "instructions"
+        case itemName = "itemName"
     }
 }
