@@ -33,6 +33,7 @@ class MenuItemCell: UITableViewCell {
             if let value = value {
                 self?.quantity.text = "\(value)"
                 self?.quantityStepper.value = Double(value)
+                notify(vm)
             }
         })
         

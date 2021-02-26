@@ -1,6 +1,6 @@
 [
   {
-    "id": 0,
+    "id": 101,
     "name":"Vada Pav",
     "imageURL": "http://localhost/vadapav.jpg",
     "thumbnailURL": "http://localhost/t_vadapav.jpg",
@@ -8,12 +8,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 2.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 1,
+    "id": 102,
 "name":"Special Thali",
     "imageURL": "http://localhost/thali.jpg",
     "thumbnailURL": "http://localhost/t_thali.jpg",
@@ -26,7 +26,7 @@
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 103,
     "name":"Mashala Tea",
     "imageURL": "http://localhost/tea.jpg",
     "thumbnailURL": "http://localhost/t_tea.jpg",
@@ -34,12 +34,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 2.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 104,
     "name":"Cold Drink",
     "imageURL": "http://localhost/sprite.jpg",
     "thumbnailURL": "http://localhost/t_sprite.jpg",
@@ -48,12 +48,12 @@
       "Gluten free",
       "Beverages"
     ],
-    "price": 0,
+    "price": 0.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 105,
 "name":"Samosa",
     "imageURL": "http://localhost/samosa.jpg",
     "thumbnailURL": "http://localhost/t_samosa.jpg",
@@ -61,12 +61,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 0.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 106,
 "name":"Paneer Tikka",
     "imageURL": "http://localhost/paneertikka.jpg",
     "thumbnailURL": "http://localhost/t_paneertikka.jpg",
@@ -74,12 +74,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 9.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 107,
     "name":"Mango Lassi",
     "imageURL": "http://localhost/mangolassi.jpg",
     "thumbnailURL": "http://localhost/t_mangolassi.jpg",
@@ -87,12 +87,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 2.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 108,
     "name":"Malai Paneer",
     "imageURL": "http://localhost/malaipaneer.jpg",
     "thumbnailURL": "http://localhost/t_malaipaneer.jpg",
@@ -100,24 +100,24 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 8.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 109,
     "name":"Fish Curry",
     "imageURL": "http://localhost/fishcurry.jpg",
     "thumbnailURL": "http://localhost/t_fishcurry.jpg",
     "categories": [
       "Non Vegetarian"
     ],
-    "price": 0,
+    "price": 9.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 110,
     "name":"Yellow  Dal",
     "imageURL": "http://localhost/dal.jpg",
     "thumbnailURL": "http://localhost/t_dal.jpg",
@@ -125,24 +125,24 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 5.99,
     "descriptions": "",
     "ingredients": "Pigeon Pea, Vegitable Oil, Salt and Spices"
   },
   {
-    "id": 0,
+    "id": 111,
     "name":"Dabeli",
     "imageURL": "http://localhost/Dabeli.jpg",
     "thumbnailURL": "http://localhost/t_dabeli.jpg",
     "categories": [
       "Vegetarian", "Vegan"
     ],
-    "price": 0,
+    "price": 2.00,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 112,
     "name":"Butter Milk",
     "imageURL": "http://localhost/buttermilk.jpg",
     "thumbnailURL": "http://localhost/t_buttermilk.jpg",
@@ -150,12 +150,12 @@
       "Vegetarian",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 1.0,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 113,
 "name":"Burger",
     "imageURL": "http://localhost/burger.jpg",
     "thumbnailURL": "http://localhost/t_burger.jpg",
@@ -163,12 +163,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 2.0,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 114,
     "name":"Bhel Poori",
     "imageURL": "http://localhost/bhelpoori.jpg",
     "thumbnailURL": "http://localhost/t_bhelpoori.jpg",
@@ -176,12 +176,12 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 2.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   },
   {
-    "id": 0,
+    "id": 115,
     "name":"Baigan Bhartha",
     "imageURL": "http://localhost/baiganbhartha.jpg",
     "thumbnailURL": "http://localhost/t_baiganbhartha.jpg",
@@ -189,7 +189,7 @@
       "Vegetarian", "Vegan",
       "Gluten free"
     ],
-    "price": 0,
+    "price": 5.99,
     "descriptions": "",
     "ingredients": "Potetos, Peanut Oil, Gram flour, Salt"
   }

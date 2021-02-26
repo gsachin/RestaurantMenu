@@ -10,9 +10,13 @@ import UIKit
 
 class OrderItemViewController : UIViewController
 {
+    static var orderNumber = 221
     var orderViewModel:OrderViewModel?
     @IBOutlet var tableView:UITableView!
-    
+    @IBOutlet var confirmButton:UIButton!
+    @IBOutlet var mobileNumber:BindableTextField!
+    @IBOutlet var tableNumber:BindableTextField!
+    @IBOutlet var totalAmount:UILabel!
     // MARK: - UITableViewDataSource
     
     override func viewDidLoad() {
@@ -23,6 +27,24 @@ class OrderItemViewController : UIViewController
             self?.tableView.reloadData()
         })
         self.title = NSLocalizedString("Order Confirmation", comment: "")
+        
+        mobileNumber.Binding {[weak self] (text) in
+            self?.orderViewModel?.mobileNumber?.value = text
+            self?.orderViewModel?.validate()
+        }
+        tableNumber.Binding {[weak self] (text) in
+            self?.orderViewModel?.tableNumber?.value = text
+            self?.orderViewModel?.validate()
+        }
+        orderViewModel?.isVailid.Binding {[weak self] (validOrder) in
+            //self?.confirmButton.isUserInteractionEnabled = validOrder ?? false
+            self?.confirmButton.isEnabled = validOrder ?? false
+        }
+        orderViewModel?.total?.Binding(callback: {[weak self] (amount) in
+            if let amount = amount {
+                self?.totalAmount.text = String(format: "Total Amount: %.2f", amount)
+            }
+        })
     }
     
     
@@ -35,7 +57,7 @@ extension OrderItemViewController:UITableViewDelegate {
 extension OrderItemViewController : UITableViewDataSource, SelectedMenuItemDelegate
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return  2 //orderViewModel?.numberOfRows(section) ?? 0
+        return  orderViewModel?.numberOfRows(section) ?? 0
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 74
@@ -61,7 +83,7 @@ extension OrderItemViewController : UITableViewDataSource, SelectedMenuItemDeleg
         let menuItem = orderViewModel?.modelAt(indexPath.row)
             // cell.textLabel?.text = menuItem?.name.value ?? ""
             cell.configure(menuItem,  notify:{ menuItemViewModel in
-                //self.orderViewModel.notifyItemQuantityChanges(menuItemViewModel: menuItemViewModel)
+                self.orderViewModel?.calculateAmount()
             })
             return cell
         
@@ -73,8 +95,21 @@ extension OrderItemViewController : UITableViewDataSource, SelectedMenuItemDeleg
         //guard let suggestedSearchDelegate = suggestedSearchDelegate else { return }
         
     }
-    
-    
+   
+    @IBAction func confirmOrder(_ sender:UIButton) {
+        showAlertWithThreeButton()
+    }
+    func showAlertWithThreeButton() {
+        let alert = UIAlertController(title: "Order Confirmated", message: "Your order is confimred, \n Order Number: \(OrderItemViewController.orderNumber)", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                self.navigationController?.popViewController(animated: true)
+               // self.dismiss(animated: true) {
+               // }
+            }))
+
+            self.present(alert, animated: true, completion: nil)
+        }
     
 }
 

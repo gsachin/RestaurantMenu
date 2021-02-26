@@ -20,7 +20,7 @@ struct MenuItemListViewModel {
     
     
     func notifyItemQuantityChanges(menuItemViewModel:MenuItemViewModel?) {
-
+        self.validOrder.value = self.getOrderMenuItems().count > 0
     }
     
     var selectedCategory = BindableProperty<Category>(Category.all) {

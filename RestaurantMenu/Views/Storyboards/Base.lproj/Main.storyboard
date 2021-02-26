@@ -296,7 +296,7 @@
                                 <rect key="frame" x="20" y="96" width="374" height="728"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="keQ-cD-KWS">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="141"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="273.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3B-SU-fcS">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -304,19 +304,19 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-vA-Gfq">
-                                                <rect key="frame" x="0.0" y="28.5" width="374" height="42"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-vA-Gfq" customClass="BindableTextField" customModule="MenuClip" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28.5" width="374" height="174.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Table Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcq-b0-Rw3">
-                                                <rect key="frame" x="0.0" y="78.5" width="374" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="211" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-4g-CQy">
-                                                <rect key="frame" x="0.0" y="107" width="374" height="34"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Table Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e6e-4g-CQy" customClass="BindableTextField" customModule="MenuClip" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="239.5" width="374" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -333,7 +333,7 @@
                                         </constraints>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YjW-Qf-Fg8">
-                                        <rect key="frame" x="0.0" y="149" width="374" height="579"/>
+                                        <rect key="frame" x="0.0" y="281.5" width="374" height="418"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="RzS-bc-Y1K">
                                             <rect key="frame" x="0.0" y="130" width="374" height="44"/>
@@ -431,13 +431,25 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ol-57-zYs">
+                                        <rect key="frame" x="0.0" y="707.5" width="374" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20.5" id="ir9-45-ZzE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="keQ-cD-KWS" firstAttribute="leading" secondItem="rso-km-eCi" secondAttribute="leading" id="5IO-9G-24Z"/>
-                                    <constraint firstAttribute="bottom" secondItem="YjW-Qf-Fg8" secondAttribute="bottom" id="7bP-vo-BHc"/>
+                                    <constraint firstItem="1Ol-57-zYs" firstAttribute="top" secondItem="YjW-Qf-Fg8" secondAttribute="bottom" constant="8" symbolic="YES" id="BOd-UD-az3"/>
+                                    <constraint firstItem="1Ol-57-zYs" firstAttribute="leading" secondItem="rso-km-eCi" secondAttribute="leading" id="ec0-1w-A0I"/>
                                     <constraint firstItem="YjW-Qf-Fg8" firstAttribute="top" secondItem="keQ-cD-KWS" secondAttribute="bottom" constant="8" symbolic="YES" id="k5F-Ss-ofQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Ol-57-zYs" secondAttribute="bottom" id="na1-ti-TTa"/>
                                     <constraint firstAttribute="trailing" secondItem="keQ-cD-KWS" secondAttribute="trailing" id="w0h-uJ-VnT"/>
                                     <constraint firstAttribute="trailing" secondItem="YjW-Qf-Fg8" secondAttribute="trailing" id="wdd-JV-pEN"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Ol-57-zYs" secondAttribute="trailing" id="yHE-Fk-7pc"/>
                                     <constraint firstItem="YjW-Qf-Fg8" firstAttribute="leading" secondItem="rso-km-eCi" secondAttribute="leading" id="zOK-fJ-1Jd"/>
                                 </constraints>
                             </stackView>
@@ -447,6 +459,9 @@
                                     <constraint firstAttribute="height" constant="30" id="svg-dh-yCC"/>
                                 </constraints>
                                 <state key="normal" title="Confirm Order"/>
+                                <connections>
+                                    <action selector="confirmOrder:" destination="91v-a1-V8K" eventType="touchUpInside" id="BQH-UL-vJC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3qG-L3-jx1"/>
@@ -463,7 +478,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="8Ik-0M-WPG"/>
                     <connections>
+                        <outlet property="confirmButton" destination="zey-HV-TMG" id="iPm-na-lau"/>
+                        <outlet property="mobileNumber" destination="2e4-vA-Gfq" id="rPI-VW-DMd"/>
+                        <outlet property="tableNumber" destination="e6e-4g-CQy" id="7pd-Z9-FRk"/>
                         <outlet property="tableView" destination="YjW-Qf-Fg8" id="1XK-yp-izD"/>
+                        <outlet property="totalAmount" destination="1Ol-57-zYs" id="pKv-Sp-RUw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3z2-Hh-TyI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

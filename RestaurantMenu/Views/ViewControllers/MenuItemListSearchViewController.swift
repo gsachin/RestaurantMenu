@@ -66,7 +66,8 @@ class MenuItemListSearchViewController: UIViewController {
         }
         
         menuItemListViewModel.validOrder.Binding {[weak self] (validOrder) in
-            self?.confirmButton.isUserInteractionEnabled = validOrder ?? false
+            //self?.confirmButton.isUserInteractionEnabled = validOrder ?? false
+            self?.confirmButton.isEnabled = validOrder ?? false
         }
     }
     
