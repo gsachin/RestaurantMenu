@@ -58,7 +58,7 @@ struct MenuItem : Codable {
         
     }
     func createOrder(quantities:Int, withInstructions instructions:String = "")->OrderItem {
-        return OrderItem(menuItem: self, quantities: quantities, price: self.price, Instructions: instructions)
+        return OrderItem(menuItem: self, quantities: quantities, price: self.price)
     }
 }
 

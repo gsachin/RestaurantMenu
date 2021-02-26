@@ -63,6 +63,16 @@ class TextContaintsSpecification:Specification {
     }
 }
 
+class MinimumQtySpecification:Specification {
+    let qty:Int
+    init(quantity:Int) {
+        self.qty = quantity
+    }
+    typealias T = MenuItemViewModel
+    func isSatisfied(_ item:T) -> Bool {
+        return item.quantities.value ?? 0 >= qty
+    }
+}
 
 class CategorySpecification:Specification {
     let searchToken:Category
@@ -79,6 +89,22 @@ class CategorySpecification:Specification {
 }
 
 class MenuItemViewModelFilter: Filter {
+    
+    typealias T = MenuItemViewModel
+    
+    func filter<S:Specification>(_ items:[T], _ spec:S ) -> [T]
+    where S.T == T {
+        var menuItems = [MenuItemViewModel]()
+        for item in items {
+            if spec.isSatisfied(item) {
+                menuItems.append(item)
+            }
+        }
+        return menuItems
+    }
+}
+
+class OrderItemViewModelFilter: Filter {
     
     typealias T = MenuItemViewModel
     

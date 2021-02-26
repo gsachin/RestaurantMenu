@@ -18,6 +18,7 @@ class MenuItemListSearchViewController: UIViewController {
     var searchController : UISearchController!
     @IBOutlet var tableView:UITableView!
     @IBOutlet var searchBarContainer:UIView!
+    @IBOutlet var confirmButton:UIButton!
     var searchTokens: [UISearchToken] = []
     var cancellable : AnyCancellable?
     //@IBOutlet var searchBarContainer:UIView!
@@ -62,6 +63,10 @@ class MenuItemListSearchViewController: UIViewController {
                 // We are no longer interested in cell navigating, since we are now showing the suggested searches.
                 self?.tableView.delegate = self
             }
+        }
+        
+        menuItemListViewModel.validOrder.Binding {[weak self] (validOrder) in
+            self?.confirmButton.isUserInteractionEnabled = validOrder ?? false
         }
     }
     
@@ -124,7 +129,13 @@ extension MenuItemListSearchViewController : UITableViewDataSource, SelectedMenu
         if let destinationViewController = segue.destination as? MenuItemDetailViewController {
             destinationViewController.menuItemViewModel = menuItemListViewModel.modelAt(tableView.indexPathForSelectedRow!.row)
             destinationViewController.selectedMenuItemDelegate = self
+        } else if let destinationViewController = segue.destination as? OrderItemViewController {
+            
+            let orderList = menuItemListViewModel.getOrderMenuItems() 
+            destinationViewController.orderViewModel = OrderViewModel(orderItemViewModelList: orderList )
         }
+                //menuItemListViewModel.modelAt(tableView.indexPathForSelectedRow!.row)
+//            destinationViewController.selectedMenuItemDelegate = self
     }
     func didSelect(menuItemVM: MenuItemViewModel?) {
         

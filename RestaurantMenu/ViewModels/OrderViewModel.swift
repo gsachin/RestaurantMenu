@@ -7,7 +7,7 @@
 
 import Foundation
 struct OrderViewModel {
-    var order:Order
+    var order = Order(restaurantId: UUID(), orderItems: [MenuItem]())
     var restaurantId:BindableProperty<UUID>? {
         didSet {
             if let restaurantid = restaurantId?.value {
@@ -50,8 +50,8 @@ struct OrderViewModel {
             }
         }
     }
-    init(order:Order) {
-        self.order = order
+    init(orderItemViewModelList:[MenuItemViewModel]) {
+        self.orderItemViewModelList = BindableViewModelProperty(orderItemViewModelList)
     }
     
     func numberOfRows(_ section: Int) -> Int {

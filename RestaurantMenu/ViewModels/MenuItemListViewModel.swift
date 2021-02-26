@@ -11,9 +11,13 @@ struct MenuItemListViewModel {
     var Items = BindableViewModelProperty<[MenuItemViewModel]>([MenuItemViewModel]()) {
         didSet {
                 filterItems = BindableViewModelProperty<[MenuItemViewModel]>(Items.value)
+                self.validOrder.value = self.getOrderMenuItems().count > 0
             }
     }
     var filterItems:BindableViewModelProperty<[MenuItemViewModel]>?
+    
+    var validOrder =  BindableProperty(false)
+    
     
     func notifyItemQuantityChanges(menuItemViewModel:MenuItemViewModel?) {
 
@@ -80,6 +84,14 @@ struct MenuItemListViewModel {
     
     mutating func reset() {
         filterItems = BindableViewModelProperty<[MenuItemViewModel]>(Items.value)
+    }
+    func getOrderMenuItems()-> [MenuItemViewModel] {
+        let minimumQtySpecification = MinimumQtySpecification(quantity: 1)
+        if let items = self.Items.value {
+            let result = MenuItemViewModelFilter().filter(items, minimumQtySpecification)
+            return result
+        }
+        return [MenuItemViewModel]()
     }
 }
 

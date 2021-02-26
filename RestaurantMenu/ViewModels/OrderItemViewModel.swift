@@ -29,15 +29,15 @@ struct OrderItemViewModel {
     }
     
     
-    var instructions : BindableProperty<String> {
-        didSet {
-            if let instructions = instructions.value {
-                orderItem.instructions = instructions
-            }else {
-                orderItem.instructions = ""
-            }
-        }
-    }
+//    var instructions : BindableProperty<String> {
+//        didSet {
+//            if let instructions = instructions.value {
+//                orderItem.instructions = instructions
+//            }else {
+//                orderItem.instructions = ""
+//            }
+//        }
+//    }
     
     var quantities : BindableProperty<Int> {
         didSet {
@@ -56,6 +56,6 @@ struct OrderItemViewModel {
         self.id = BindableProperty<Int>(menuItem.id)
         self.quantities = BindableProperty<Int>(quantities)
         self.price = BindableProperty<Double>(menuItem.price)
-        self.instructions = BindableProperty<String>(instructions)
+        //self.instructions = BindableProperty<String>(instructions)
     }
 }
