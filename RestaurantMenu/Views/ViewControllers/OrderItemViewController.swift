@@ -23,6 +23,8 @@ class OrderItemViewController : UIViewController
         super.viewDidLoad()
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        tableNumber.delegate = self
+        mobileNumber.delegate = self
         orderViewModel?.orderItemViewModelList?.Binding(callback: {[weak self] (_) in
             self?.tableView.reloadData()
         })
@@ -113,3 +115,10 @@ extension OrderItemViewController : UITableViewDataSource, SelectedMenuItemDeleg
     
 }
 
+extension OrderItemViewController:UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool
+        {
+            textField.resignFirstResponder()
+            return true;
+        }
+}

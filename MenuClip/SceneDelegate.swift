@@ -49,7 +49,23 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
+    func scene(_ scene: UIScene, didUpdate userActivity: NSUserActivity) {
+        //https://restaurantmenu-appclips.web.app
+    }
+//    - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
+//
+//    }
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        
+    }
+    func handleUserActivity(_ userActivity: NSUserActivity) {
+        
+    }
 
-
+//    func scene(_ scene: UIScene,
+//          willConnectTo session: UISceneSession,
+//          options connectionOptions: UIScene.ConnectionOptions) {
+//        
+//    }
 }
 
